@@ -1,13 +1,15 @@
-apiVersion: backstage.io/v1alpha1
-kind: Component
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+# some metadata about the template itself
 metadata:
-  name: nodejs_templete
-  annotations:
-    github.com/project-slug: abhay-statusneo/nodejs_templete
+  name: v1beta3-demo
+  title: Test Action template
+  description: scaffolder v1beta3 template demo
 spec:
-  type: templete
-  lifecycle: development
-  owner: guests
+  owner: backstage/techdocs-core
+  type: service
+
+  # these are the steps which are rendered in the frontend with the form input
   parameters:
     - title: Fill in some steps
       required:
