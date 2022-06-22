@@ -30,6 +30,8 @@ spec:
           title: Repository Location
           type: string
           ui:field: RepoUrlPicker
+          withCredentials: 
+            key: oauth
           ui:options:
             allowedHosts:
               - github.com
@@ -58,6 +60,7 @@ spec:
         allowedHosts: ['github.com']
         description: This is ${{ parameters.name }}
         repoUrl: ${{ parameters.repoUrl }}
+        token: ${{ secrets.oauth }}
 
     - id: register
       name: Register
