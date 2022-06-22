@@ -3,8 +3,8 @@ kind: Template
 # some metadata about the template itself
 metadata:
   name: Node_js
-  title: Node Js Basic Templete
-  description: Node js project
+  title: NodeJs Basic Templete
+  description: Nodejs project
 spec:
   owner: backstage/techdocs-core
   type: service
