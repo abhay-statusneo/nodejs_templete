@@ -52,21 +52,6 @@ spec:
     #   input:
     #     targetPath: ./community
     #     url: https://github.com/backstage/community/tree/main/backstage-community-sessions
-    - id: Write
-      name: Write Catalog information
-      action: catalog:write
-      input:
-        component:
-          apiVersion: 'backstage.io/v1alpha1'
-          kind: Component
-          metadata:
-            name: ${{ parameters.name }}
-            annotations:
-              github.com/abhay-statusneo/: ${{ parameters.repoUrl }}
-          spec:
-            type: service
-            lifecycle: experimental
-            owner: ${{ parameters.owner }}
 
     - id: publish
       name: Publish
