@@ -22,6 +22,8 @@ jobs:
             - name: "move"
               run: |
                 cd ../../
+                ls
+                cd template
             - name: Install Node
               uses: actions/setup-node@v3  
               with: 
