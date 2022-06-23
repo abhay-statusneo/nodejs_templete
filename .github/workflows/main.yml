@@ -26,7 +26,7 @@ jobs:
             - name: Install dependencies
               run: npm install
             - name: move to root directory
-              run: cd ../../
+              run: cd ../../template
             - name: list files
               run: ls
             - name: "Run Test"
