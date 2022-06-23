@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: nodejs_templete
   annotations:
-    github.com/project-slug: abhay-statusneo/nodejs_templete
+    backstage.io/managed-by-location: url:http://github.com/abhay-statusneo/${{ parameters.name }}
 spec:
   type: templete
   lifecycle: development
@@ -55,7 +55,7 @@ spec:
       input:
         allowedHosts: ['github.com']
         description: This is ${{ parameters.name }}
-        repoUrl: ${{ parameters.repoUrl }}
+        repoUrl: url:http://github.com/abhay-statusneo/${{ parameters.name }}
 
     - id: register
       name: Register
