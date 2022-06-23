@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "node1"
+  name: ${{ values.name | dump }}
 spec:
   type: service
   owner: user:guest
