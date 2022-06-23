@@ -20,7 +20,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: 'Install Node'
-            - run: sudo apt -y install nodejs
+              run: sudo apt -y install nodejs
             - name: Install mocha
               run: npm install -g mocha
             - name: Install dependencies
