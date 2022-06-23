@@ -26,7 +26,6 @@ jobs:
               uses: actions/setup-node@v3  
               with: 
                 node-version: 14
-                cache: 'npm'
             - name: Install mocha
               run: npm install -g mocha
             - name: Install dependencies
