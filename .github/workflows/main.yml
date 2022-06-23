@@ -24,7 +24,9 @@ jobs:
             - name: Install mocha
               run: npm install -g mocha
             - name: Install dependencies
-              run: npm install 
+              run: npm install
+            - name: move to root directory
+              run: cd ../../template
             - name: "Run Test"
-              run: "mocha ../template/test/converter.js --timeout 60000 --exit"
+              run: npm test
 
