@@ -34,6 +34,6 @@ jobs:
             - name: "Run Test"
               run: |
                ls
-               cd ../../template
+               cd template
                npm test
 
