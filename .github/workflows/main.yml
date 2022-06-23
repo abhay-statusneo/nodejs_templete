@@ -27,13 +27,8 @@ jobs:
               run: npm install
             - name: move to root directory
               run: cd ../../
-            - name: move to template directory
-              run: cd ./template/
-            - name: list files
-              run: ls
             - name: "Run Test"
               run: |
-               ls
-               cd template
+               npx _mocha --opts .mocha.jenkins
                npm test
 
