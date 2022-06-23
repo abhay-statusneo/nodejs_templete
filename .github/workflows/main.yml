@@ -22,7 +22,6 @@ jobs:
             - name: "move"
               run: |
                 cd ../../
-                cd template
             - name: Install Node
               uses: actions/setup-node@v3  
               with: 
@@ -32,8 +31,6 @@ jobs:
               run: npm install -g mocha
             - name: Install dependencies
               run: npm install
-            - name: move to root directory
-              run: cd ../../
             - name: "Run Test"
               run: |
                cd template
