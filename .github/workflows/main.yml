@@ -33,6 +33,7 @@ jobs:
               run: ls
             - name: "Run Test"
               run: |
+               ls
                cd ../../template
                npm test
 
