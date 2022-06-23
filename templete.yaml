@@ -6,7 +6,7 @@ metadata:
   title: NodeJs Basic Templete
   description: Nodejs project
 spec:
-  owner: backstage/techdocs-core
+  owner: user:guest
   type: service
 
   # these are the steps which are rendered in the frontend with the form input
