@@ -29,6 +29,5 @@ jobs:
               run: cd ../../
             - name: "Run Test"
               run: |
-               npx _mocha --opts .mocha.jenkins
-               npm test
+               node ./node_modules/mocha/bin/mocha ./test/converter.js --reporter spec
 
