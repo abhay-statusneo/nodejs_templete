@@ -52,6 +52,7 @@ spec:
     #   input:
     #     targetPath: ./community
     #     url: https://github.com/backstage/community/tree/main/backstage-community-sessions
+    - id: Write
       name: Write Catalog information
       action: catalog:write
       input:
