@@ -62,7 +62,7 @@ spec:
           metadata:
             name: ${{ parameters.name }}
             annotations:
-              github.com/abhay-statusneo: ${{ parameters.repoUrl }}
+              github.com/abhay-statusneo/: ${{ parameters.repoUrl }}
           spec:
             type: service
             lifecycle: experimental
