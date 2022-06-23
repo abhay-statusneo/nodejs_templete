@@ -62,10 +62,10 @@ spec:
           metadata:
             name: ${{ parameters.name }}
             annotations:
-              github.com/project-slug: ${{ parameters.repoUrl | projectSlug }}
+              github.com: ${{ parameters.repoUrl }}
           spec:
             type: service
-            lifecycle: development
+            lifecycle: experimental
             owner: ${{ parameters.owner }}
 
     - id: publish
