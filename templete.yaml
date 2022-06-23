@@ -52,6 +52,20 @@ spec:
     #   input:
     #     targetPath: ./community
     #     url: https://github.com/backstage/community/tree/main/backstage-community-sessions
+    name: Write Catalog information
+      action: catalog:write
+      input:
+        component:
+          apiVersion: 'backstage.io/v1alpha1'
+          kind: Component
+          metadata:
+            name: ${{ parameters.name }}
+            annotations:
+              github.com/project-slug: ${{ parameters.repoUrl | projectSlug }}
+          spec:
+            type: service
+            lifecycle: development
+            owner: ${{ parameters.owner }}
 
     - id: publish
       name: Publish
