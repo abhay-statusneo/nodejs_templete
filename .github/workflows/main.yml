@@ -28,7 +28,7 @@ jobs:
             - name: move to root directory
               run: cd ../../
             - name: move to template directory
-              run: cd template/
+              run: cd ./template/
             - name: list files
               run: ls
             - name: "Run Test"
