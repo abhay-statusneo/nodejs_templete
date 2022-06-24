@@ -32,6 +32,7 @@ jobs:
             - name: Install dependencies
               run: |
                ls
+               cd template
                npm install
             - name: "Run Test"
               run: |
