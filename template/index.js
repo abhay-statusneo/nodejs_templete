@@ -1,16 +1,17 @@
 var express = require('express');
 var nunjucks = require('nunjucks');
 var converter = require("./app/converter");
+var config = require('./config')
 
-var app =express();
+var app = express();
 
 
 var env = nunjucks.configure(['views/'], {
     autoescape: true,
     express: app
-});
+})
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     var data = {
         name: 'Abhay Singh',
         age: 29,
@@ -19,24 +20,25 @@ app.get('/', function(req, res) {
     res.send(200, JSON.stringify(data))
 })
 
-app.get("/rgbToHex", function(req, res) {
+app.get("/rgbToHex", function (req, res) {
 
-    var red   = parseInt(req.query.red, 10);
+    var red = parseInt(req.query.red, 10);
     var green = parseInt(req.query.green, 10);
-    var blue  = parseInt(req.query.blue, 10);
+    var blue = parseInt(req.query.blue, 10);
     var hex = converter.rgbToHex(red, green, blue);
     res.send(hex);
-  
-  });
-  
-  app.get("/hexToRgb", function(req, res) {
-  
+
+});
+
+app.get("/hexToRgb", function (req, res) {
+
     var hex = req.query.hex;
     var rgb = converter.hexToRgb(hex);
     res.send(JSON.stringify(rgb));
-  
-  });
 
-app.listen(4000, function() {
+});
+
+var port = config.port ?? 4000
+app.listen(port, function () {
     console.log('templete app is running on 4000 port')
 })
