@@ -30,6 +30,5 @@ jobs:
                npm install
             - name: "Run Test"
               run: |
-               cd template
                node ./node_modules/mocha/bin/mocha ./test/converter.js --reporter spec
 
