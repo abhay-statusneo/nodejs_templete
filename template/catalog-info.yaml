@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: ${{ values.name | dump }}
-  test: ${{ values.allParameter }}
+  test: ${{ each val in values.allParameter | dump}}:${{val}}
   annotations:
     gocd.org/pipelines: backstage,backstage-pr,backstage-builder
 spec:
