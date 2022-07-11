@@ -8,7 +8,6 @@ metadata:
 spec:
   owner: user:guest
   type: service
-
   # these are the steps which are rendered in the frontend with the form input
   parameters:
     - title: Fill in some steps
@@ -52,6 +51,7 @@ spec:
       input:
         url: ./template
         values:
+          allParameter: ${{ parameters }}
           name: ${{ parameters.name }}
           port: ${{ parameters.port }}
 

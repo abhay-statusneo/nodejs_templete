@@ -2,6 +2,20 @@ var express = require('express');
 var nunjucks = require('nunjucks');
 var converter = require("./app/converter");
 var config = require('./config')
+const axios = require('axios');
+const sendGetRequest = async () => {
+    try {
+        const resp = await axios.get('https://neosample.jfrog.io/artifactory/api/build', {
+            headers: {
+                'X-JFrog-Art-Api' : 'AKCp8mZT9hVAy6d6vk85xqgW9tVsHFMmcKfhw33kPezDaj5wfTyzirpgxHidWj1C9MmVPkrd6'
+            }
+        });
+        console.log(resp.data);
+    } catch (err) {
+        console.error(err);
+    }
+};
+sendGetRequest();
 
 var app = express();
 
