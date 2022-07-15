@@ -6,7 +6,7 @@ metadata:
   title: NodeJs Basic Templete
   description: Nodejs project
 spec:
-  owner: user:guest
+  owner: abhay-statusneo
   type: service
   # these are the steps which are rendered in the frontend with the form input
   parameters:
@@ -21,6 +21,18 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
+            
+    - title: Backstage Catalog Item Configuration
+      required:
+        - owner
+      properties:
+        owner:
+          title: Entity Owner
+          type: string
+          description: Owner of the created entity in backstage
+          ui:fileld: OwnerPicker
+          ui:options:
+            allowedKinds: [Group]
     - title: Choose a location
       required:
         - repoUrl
@@ -52,6 +64,7 @@ spec:
         url: ./template
         values:
           allParameter: ${{ parameters }}
+          owner: ${{ parameters.owner}}
           name: ${{ parameters.name }}
           port: ${{ parameters.port }}
 
