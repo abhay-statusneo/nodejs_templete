@@ -7,5 +7,5 @@ metadata:
     gocd.org/pipelines: backstage,backstage-pr,backstage-builder
 spec:
   type: service
-  owner: user:guest
+  owner: ${{ values.owner | dump }}
   lifecycle: experimental
